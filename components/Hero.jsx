@@ -85,7 +85,7 @@ export default function Hero() {
           </h2>
           
           <p className="text-lg md:text-xl text-gray-400 mb-12 max-w-3xl mx-auto leading-relaxed animate-slide-up animation-delay-800">
-            I'm a <span className="text-purple-400 font-semibold relative inline-block group">
+            I&apos;m a <span className="text-purple-400 font-semibold relative inline-block group">
               <span className="relative z-10">full-stack developer</span>
               <span className="absolute bottom-0 left-0 w-full h-1 bg-purple-400 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
             </span> and computer science enthusiast specializing in building 

@@ -44,9 +44,11 @@ export default function About() {
 
     window.addEventListener('mousemove', handleMouseMove)
     
+    const currentSection = sectionRef.current
+    
     return () => {
-      if (sectionRef.current) {
-        observer.unobserve(sectionRef.current)
+      if (currentSection) {
+        observer.unobserve(currentSection)
       }
       window.removeEventListener('mousemove', handleMouseMove)
     }
@@ -126,13 +128,13 @@ export default function About() {
           }`}>
             <div className="space-y-4">
               <p className="text-lg text-gray-400 leading-relaxed">
-                Hey there! I'm <span className="text-purple-400 font-semibold">Shivam Jaiswal</span>, a passionate computer science enthusiast 
+                Hey there! I&apos;m <span className="text-purple-400 font-semibold">Shivam Jaiswal</span>, a passionate computer science enthusiast 
                 and an aspiring engineer on a journey through the exciting world of bits, bytes, and algorithms. 
-                I completed my degree in Computer Science and Engineering at VIT Chennai, I'm all about 
+                I completed my degree in Computer Science and Engineering at VIT Chennai, I&apos;m all about 
                 diving deep into the realms of technology, coding, and innovation.
               </p>
               <p className="text-lg text-gray-400 leading-relaxed">
-                I'm currently working as a <span className="text-purple-400 font-semibold">Java Escalation Engineer</span> at Tufin Software Technologies, 
+                I&apos;m currently working as a <span className="text-purple-400 font-semibold">Java Escalation Engineer</span> at Tufin Software Technologies, 
                 where I develop and maintain backend services for the Tufin Orchestration Suite. I specialize in 
                 integrating network security devices and optimizing performance for enterprise networks.
               </p>
@@ -145,7 +147,7 @@ export default function About() {
             
             <div className="pt-6">
               <h3 className="text-xl font-semibold text-white mb-6">
-                Here are a few technologies I've been working with recently:
+                Here are a few technologies I&apos;ve been working with recently:
               </h3>
               <ul className="grid grid-cols-2 gap-3">
                 {technologies.map((tech, index) => (

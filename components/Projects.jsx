@@ -44,9 +44,11 @@ export default function Projects() {
 
     window.addEventListener('mousemove', handleMouseMove)
     
+    const currentSection = sectionRef.current
+    
     return () => {
-      if (sectionRef.current) {
-        observer.unobserve(sectionRef.current)
+      if (currentSection) {
+        observer.unobserve(currentSection)
       }
       window.removeEventListener('mousemove', handleMouseMove)
     }
@@ -158,11 +160,11 @@ export default function Projects() {
             03. Featured Projects
           </span>
           <h2 className="text-4xl md:text-6xl font-bold text-white mb-4">
-            Some Things I've Built
+            Some Things I&apos;ve Built
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-purple-500 to-pink-500 mx-auto"></div>
           <p className="mt-6 text-lg text-gray-400 max-w-2xl mx-auto">
-            A selection of projects I've worked on recently
+            A selection of projects I&apos;ve worked on recently
           </p>
         </div>
 
