@@ -43,9 +43,11 @@ export default function Certificates() {
 
     window.addEventListener('mousemove', handleMouseMove)
     
+    const currentSection = sectionRef.current
+    
     return () => {
-      if (sectionRef.current) {
-        observer.unobserve(sectionRef.current)
+      if (currentSection) {
+        observer.unobserve(currentSection)
       }
       window.removeEventListener('mousemove', handleMouseMove)
     }
@@ -180,7 +182,7 @@ export default function Certificates() {
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-purple-500 to-pink-500 mx-auto"></div>
           <p className="mt-6 text-lg text-gray-400 max-w-2xl mx-auto">
-            Professional certifications and achievements I've earned
+            Professional certifications and achievements I&apos;ve earned
           </p>
         </div>
 

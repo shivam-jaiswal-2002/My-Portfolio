@@ -50,9 +50,11 @@ export default function Contact() {
 
     window.addEventListener('mousemove', handleMouseMove)
     
+    const currentSection = sectionRef.current
+    
     return () => {
-      if (sectionRef.current) {
-        observer.unobserve(sectionRef.current)
+      if (currentSection) {
+        observer.unobserve(currentSection)
       }
       window.removeEventListener('mousemove', handleMouseMove)
     }
@@ -199,14 +201,14 @@ export default function Contact() {
           isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
         }`}>
           <span className="text-purple-400 font-mono text-sm md:text-base mb-4 block">
-            06. What's Next?
+            06. What&apos;s Next?
           </span>
           <h2 className="text-4xl md:text-6xl font-bold text-white mb-4">
             Get In Touch
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-purple-500 to-pink-500 mx-auto"></div>
           <p className="mt-6 text-lg text-gray-400 max-w-2xl mx-auto">
-            I'm always open to discussing new projects, creative ideas, or
+            I&apos;m always open to discussing new projects, creative ideas, or
             opportunities to be part of your visions.
           </p>
         </div>
@@ -217,11 +219,11 @@ export default function Contact() {
               isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'
             }`}>
               <h3 className="text-2xl font-semibold text-white mb-6">
-                Let's Connect
+                Let&apos;s Connect
               </h3>
               <p className="text-gray-400 mb-8 leading-relaxed">
-                Feel free to reach out if you're looking for a developer, have a
-                question, or just want to connect. I'm always open to discussing
+                Feel free to reach out if you&apos;re looking for a developer, have a
+                question, or just want to connect. I&apos;m always open to discussing
                 new opportunities and interesting projects.
               </p>
 
